@@ -1,0 +1,35 @@
+<style>
+.avatar{
+        width: 80;
+        height: 80;
+        border-radius: 100%;
+    }
+</style>
+<div class="media">
+  <div class="media-left">
+    <a href="#">
+      <img class="media-object avatar" [src]="user?.avatar_url">
+    </a>
+  </div>
+  <div class="media-body">
+    <h2 class="media-heading">{{user?.login}}</h2>
+  </div>
+</div>
+<h2>{{user?.login}} Followers</h2>
+        <div>
+            <span *ngFor="#f of followers">
+                <div class="media">
+                    <div class="media-left">
+                        <a href="#">
+                            <img class="media-object avatar" [src]="f?.avatar_url">
+                        </a>
+                    </div>
+                    <div class="media-body">
+                        <h2 class="media-heading">{{f?.login}}</h2>
+                    </div>
+                </div>
+                <br/>
+            </span>
+        </div>
+
+        

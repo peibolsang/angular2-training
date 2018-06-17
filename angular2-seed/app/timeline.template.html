@@ -1,0 +1,7 @@
+ <h2>Pablo's Timeline</h2>
+
+        <div>
+            <span *ngFor="#t of tweets">
+                <tweet [picture]="t.picture" [user]="t.user" [text]="t.text | summary:140" [like]="t.like" [counter]="t.counter"></tweet>
+            </span>
+        </div>

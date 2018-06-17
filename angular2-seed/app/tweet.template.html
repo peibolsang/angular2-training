@@ -1,0 +1,12 @@
+<div class="media">
+  <div class="media-left">
+    <a href="#">
+      <img class="media-object" [src]="picture">
+    </a>
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading">{{user}}</h4>
+    <span>{{text}}</span><br/>
+    <heart [like]="like" [counter]="counter"></heart>
+  </div>
+</div>

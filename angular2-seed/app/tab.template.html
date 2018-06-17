@@ -1,0 +1,7 @@
+<ul class="nav nav-pills">
+    <li *ngFor="#c of contents, #i=index" [class.active]="viewModeCheck(c.viewMode)"><a (click)="viewModeChange(c.viewMode)">{{(i+1)+'.'+c.viewName | uppercase}}</a></li>
+</ul>
+<div [ngSwitch]="viewMode" *ngFor="#c of contents">
+    <template [ngSwitchWhen]="c.viewMode"><div [innerHTML]="c.content"></div></template>
+</div>
+        
